@@ -2,6 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 set laststatus=2
 
+autocmd FileType python setlocal completeopt-=preview
 " set the runtime path to include Vundle and initialize
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -139,7 +140,7 @@ let g:tagbar_autofocus = 0 " autofocus on Tagbar open
 " NERDTree settings
 "=====================================
 map <f3> :NERDTreeToggle<CR>
-let NERDTreeMapOpenInTab='<ENTER>' " let nerdtree oopen all new files in new tab
+"let NERDTreeMapOpenInTab='<ENTER>' " let nerdtree oopen all new files in new tab
 
 "=====================================
 "Airline settings
@@ -165,6 +166,7 @@ nmap ,t :tabnew<CR>
 nnoremap J :tabn<CR>
 nnoremap K :tabp<CR>
 
+nnoremap <C-q> :tabclose<CR>
 " provide hjkl movements in Insert mode via the <Alt> modifier key
 
 nnoremap <C-s> :w
