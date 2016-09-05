@@ -34,6 +34,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
 "Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'tpope/vim-surround'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 
