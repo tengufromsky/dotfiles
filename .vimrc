@@ -101,7 +101,6 @@ let g:pymode_run = 0
 let g:pymode_rope = 0
 let g:pymode_rope_completion = 0
 let g:pymode_rope_complete_on_dot = 0
-let g:pymode_breakpoint = 0
 
 " documentation
 let g:pymode_doc = 0
@@ -117,7 +116,7 @@ let g:pymode_lint_write = 1
 let g:pymode_virtualenv = 1
 
 "  breakpoints
-let g:pymode_breakpoint = 1
+let g:pymode_breakpoint = 0
 let g:pymode_breakpoint_key = '<leader>b'
 
 " syntax check
