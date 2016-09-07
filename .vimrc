@@ -158,9 +158,6 @@ let g:airline_powerline_fonts = 1
 "=====================================
 "Bindings
 "=====================================
-nmap <c-s> :w<CR>
-vmap <c-s> <Esc><c-s>gv
-imap <c-s> <Esc><c-s>
 map <f2> :noh<CR>
 
 nmap ,t :tabnew<CR>
