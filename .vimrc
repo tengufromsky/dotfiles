@@ -95,20 +95,21 @@ set ignorecase
 "=====================================
 " Python-Mode settings
 "=====================================
-let g:pymode_rope = 0
+
 let g:pymode_virtualenv = 1
-let g:pymode_run = 0
 let g:pymode_rope = 0
 let g:pymode_rope_completion = 0
 let g:pymode_rope_complete_on_dot = 0
 
 " documentation
 let g:pymode_doc = 0
-let g:pymode_doc_key = 'K'
+let g:pymode_doc_key = '<leader>k'
+
 " code check
 let g:pymode_lint = 1
 let g:pymode_lint_checker = "pyflakes,pep8"
 let g:pymode_lint_ignore="E501,W601,C0110"
+
 " check after saving
 let g:pymode_lint_write = 1
 
@@ -134,12 +135,14 @@ let g:pymode_run = 0
 "=====================================
 " TagBar settings
 "=====================================
+
 map <F4> :TagbarToggle<CR>
 let g:tagbar_autofocus = 0 " autofocus on Tagbar open
 
 "=====================================
 " NERDTree settings
 "=====================================
+
 map <f3> :NERDTreeToggle<CR>
 "let NERDTreeMapOpenInTab='<ENTER>' " let nerdtree oopen all new files in new tab
 
@@ -156,11 +159,22 @@ let g:airline#extensions#tabline#left_alt_sep = '>'
 let g:airline_powerline_fonts = 1
 
 "=====================================
+"Jedi-vim settings
+"=====================================
+
+"Disable choose first function/method at autocomplete
+let g:jedi#popup_select_first = 0
+let g:jedi#enable_docstring = 0
+let g:jedi#popup_on_dot = 0
+let g:jedi#documentation_command = "<leader>k"
+
+"=====================================
 "Bindings
 "=====================================
-nmap <c-s> :w<CR>
-vmap <c-s> <Esc><c-s>gv
-imap <c-s> <Esc><c-s>
+
+"nmap <c-s> :w<CR>
+"vmap <c-s> <Esc><c-s>gv
+"imap <c-s> <Esc><c-s>
 map <f2> :noh<CR>
 
 nmap ,t :tabnew<CR>
@@ -168,8 +182,3 @@ nnoremap J :tabn<CR>
 nnoremap K :tabp<CR>
 
 nnoremap <C-q> :tabclose<CR>
-" provide hjkl movements in Insert mode via the <Alt> modifier key
-
-nnoremap <C-s> :w
-inoremap <C-s> <C-o>:w
-vnoremap <C-s> <Esc>:w<CR>gv
