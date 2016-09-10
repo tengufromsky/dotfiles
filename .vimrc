@@ -35,6 +35,10 @@ Plugin 'scrooloose/nerdcommenter'
 "Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'tpope/vim-surround'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
+Plugin 'lukhio/vim-mapping-conflicts'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 
@@ -147,17 +151,32 @@ map <f3> :NERDTreeToggle<CR>
 "let NERDTreeMapOpenInTab='<ENTER>' " let nerdtree oopen all new files in new tab
 
 "=====================================
+" Vim-session settings
+"=====================================
+
+let g:session_autosave = 'no'
+
+nnoremap <Leader>s :SaveSession
+nnoremap <Leader>l :OpenSession
+
+"=====================================
 "Airline settings
 "=====================================
 
+set laststatus=2
 let g:airline#extensions#tabline#enabled=1
 let g:airline_enable_fugitive=1
 let g:airline_theme='powerlineish'
 let g:airline_enable_virtualenv=1
-let g:airline#extensions#tabline#left_sep = '>'
-let g:airline#extensions#tabline#left_alt_sep = '>'
 let g:airline_powerline_fonts = 1
+let g:airline_enable_gitgutter=1
+let g:airline_enable_nerdtree=1
 
+let g:airline#extensions#tabline#left_sep = '>'
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#show_splits = 0
+let g:airline#extensions#tabline#fnamecollapse = 0
+let g:airline#extensions#tabline#show_close_button = 0
 "=====================================
 "Jedi-vim settings
 "=====================================
@@ -182,3 +201,4 @@ nnoremap J :tabn<CR>
 nnoremap K :tabp<CR>
 
 nnoremap <C-q> :tabclose<CR>
+
