@@ -171,13 +171,10 @@ let g:jedi#documentation_command = "<leader>k"
 "=====================================
 "Bindings
 "=====================================
-<<<<<<< HEAD
 
 "nmap <c-s> :w<CR>
 "vmap <c-s> <Esc><c-s>gv
 "imap <c-s> <Esc><c-s>
-=======
->>>>>>> df6a79ce48d1c702fdf864de120eb5974409606d
 map <f2> :noh<CR>
 
 nmap ,t :tabnew<CR>
