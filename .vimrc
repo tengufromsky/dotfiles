@@ -82,6 +82,11 @@ colorscheme monokai
 set hlsearch
 set incsearch
 
+"Now the brackets don't blow your brain
+hi MatchParen cterm=Underline ctermbg=None ctermfg=Cyan
+
+"let loaded_matchparen = 1
+
 "For powerlione setup from pip install mode
 "python3 from powerline.vim import setup as powerline_setup
 "python3 powerline_setup()
@@ -95,6 +100,11 @@ set textwidth=79
 set number
 set numberwidth=3
 set ignorecase
+set tabstop=4 
+set shiftwidth=4
+set smarttab
+set expandtab "Ставим табы пробелами
+set softtabstop=4 "4 пробела в табе
 
 "=====================================
 " Python-Mode settings
