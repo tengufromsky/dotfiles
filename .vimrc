@@ -82,8 +82,18 @@ colorscheme monokai
 set hlsearch
 set incsearch
 
+nnoremap <C-G> :tabm -1<CR>
+nnoremap <C-H> :tabm +1<CR>
+
 "Now the brackets don't blow your brain
+
 hi MatchParen cterm=Underline ctermbg=None ctermfg=Cyan
+
+
+"Now the brackets don't blow your eyes
+
+hi Search cterm=Underline ctermbg=None ctermfg=Cyan
+hi IncSearch cterm=Underline ctermbg=None ctermfg=Magenta
 
 "let loaded_matchparen = 1
 
