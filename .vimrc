@@ -26,7 +26,7 @@ Plugin 'crusoexia/vim-monokai'
 Plugin 'tpope/vim-sensible'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'jmcantrell/vim-virtualenv'
+"Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'klen/python-mode'
 Plugin 'davidhalter/jedi-vim'
 "Plugin 'mitsuhiko/vim-jinja'
@@ -110,17 +110,23 @@ set textwidth=79
 set number
 set numberwidth=3
 set ignorecase
-set tabstop=4 
+set tabstop=4
 set shiftwidth=4
 set smarttab
 set expandtab "Ставим табы пробелами
 set softtabstop=4 "4 пробела в табе
 
 "=====================================
+ "VirtualEnv settings
+"=====================================
+
+"let g:virtualenv_directory = '$HOME/My_projects/virt_envs/'
+
+
+"=====================================
 " Python-Mode settings
 "=====================================
 
-let g:pymode_virtualenv = 1
 let g:pymode_rope = 0
 let g:pymode_rope_completion = 0
 let g:pymode_rope_complete_on_dot = 0
@@ -138,7 +144,7 @@ let g:pymode_lint_ignore="E501,W601,C0110"
 let g:pymode_lint_write = 1
 
 " support virtualenv
-let g:pymode_virtualenv = 1
+let g:pymode_virtualenv = 0
 
 "  breakpoints
 let g:pymode_breakpoint = 0
@@ -187,7 +193,7 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled=1
 let g:airline_enable_fugitive=1
 let g:airline_theme='powerlineish'
-let g:airline_enable_virtualenv=1
+"let g:airline_enable_virtualenv=1
 let g:airline_powerline_fonts = 1
 let g:airline_enable_gitgutter=1
 let g:airline_enable_nerdtree=1
