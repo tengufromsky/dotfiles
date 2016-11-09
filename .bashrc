@@ -38,5 +38,11 @@ colors() {
 PS1='\[\033[01;34m\][\[\033[01;32m\]\u\[\033[01;34m\] | \[\033[01;31m\]\W\[\033[01;34m\]] $ \[\033[00m\]'
 stty -ixon
 
+alias ga='git add'
+alias gd='git diff'
+alias go='git checkout'
+alias gb='git branch'
+alias gc='git commit'
+alias gs='git status'
 alias gitlog='git log --graph --color-words --color --source --decorate --all'
 alias ls='ls -A'
