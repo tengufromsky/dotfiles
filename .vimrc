@@ -39,6 +39,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'lukhio/vim-mapping-conflicts'
+Plugin 'tweekmonster/django-plus.vim'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 
