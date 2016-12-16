@@ -108,7 +108,7 @@ hi IncSearch cterm=Underline ctermbg=None ctermfg=Magenta
 
 set nowrap
 set textwidth=79
-set number
+set relativenumber
 set numberwidth=3
 set ignorecase
 set tabstop=4
