@@ -21,12 +21,13 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 
 Plugin 'tpope/vim-fugitive'
+Plugin 'lambdalisue/vim-pyenv'
 Plugin 'scrooloose/nerdtree'
 Plugin 'crusoexia/vim-monokai'
 Plugin 'tpope/vim-sensible'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-"Plugin 'jmcantrell/vim-virtualenv'
+Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'klen/python-mode'
 Plugin 'davidhalter/jedi-vim'
 "Plugin 'mitsuhiko/vim-jinja'
@@ -194,7 +195,7 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled=1
 let g:airline_enable_fugitive=1
 let g:airline_theme='powerlineish'
-"let g:airline_enable_virtualenv=1
+let g:airline_enable_virtualenv=1
 let g:airline_powerline_fonts = 1
 let g:airline_enable_gitgutter=1
 let g:airline_enable_nerdtree=1

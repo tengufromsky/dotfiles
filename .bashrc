@@ -46,3 +46,9 @@ alias gc='git commit'
 alias gs='git status'
 alias gitlog='git log --graph --color-words --color --source --decorate --all'
 alias ls='ls -A --color'
+
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source /usr/bin/virtualenvwrapper.sh
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
