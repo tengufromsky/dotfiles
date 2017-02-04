@@ -45,8 +45,9 @@ alias gb='git branch'
 alias gc='git commit'
 alias gs='git status'
 alias gitlog='git log --graph --color-words --color --source --decorate --all'
-alias ls='ls -A --color'
+alias lsa='ls -A --color'
 alias printscreen='import -window root screenshot.jpg'
+alias up='cd .. && lsa'
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source /usr/bin/virtualenvwrapper.sh
