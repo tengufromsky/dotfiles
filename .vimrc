@@ -16,9 +16,6 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'lambdalisue/vim-pyenv'
@@ -36,19 +33,12 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'lukhio/vim-mapping-conflicts'
 Plugin 'tweekmonster/django-plus.vim'
-
-" plugin from http://vim-scripts.org/vim/scripts.html
-
-
-" Git plugin not hosted on GitHub
-
-
-" git repos on your local machine (i.e. when working on your own plugin)
 
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -66,15 +56,7 @@ filetype plugin indent on    " required
 
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+
 
 "=====================================
 "Misc setups
@@ -205,14 +187,15 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#show_splits = 0
 let g:airline#extensions#tabline#fnamecollapse = 0
 let g:airline#extensions#tabline#show_close_button = 0
+
 "=====================================
 "Jedi-vim settings
 "=====================================
 
 "Disable choose first function/method at autocomplete
-let g:jedi#popup_select_first = 0
-let g:jedi#enable_docstring = 0
-let g:jedi#popup_on_dot = 0
+let g:jedi#popup_select_first = 1
+let g:jedi#enable_docstring = 1
+let g:jedi#popup_on_dot = 1
 let g:jedi#documentation_command = "<leader>k"
 
 "=====================================
