@@ -39,6 +39,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'lukhio/vim-mapping-conflicts'
 Plugin 'tweekmonster/django-plus.vim'
+Plugin 'fatih/vim-go'
 
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -151,7 +152,7 @@ let g:pymode_run = 0
 "=====================================
 
 map <F4> :TagbarToggle<CR>
-let g:tagbar_autofocus = 0 " autofocus on Tagbar open
+let g:tagbar_autofocus = 1 " autofocus on Tagbar open
 
 "=====================================
 " NERDTree settings
@@ -212,4 +213,3 @@ nnoremap J :tabn<CR>
 nnoremap K :tabp<CR>
 
 nnoremap <C-q> :tabclose<CR>
-
