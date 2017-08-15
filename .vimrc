@@ -38,7 +38,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'lukhio/vim-mapping-conflicts'
-Plugin 'tweekmonster/django-plus.vim'
+"Plugin 'tweekmonster/django-plus.vim'
 Plugin 'fatih/vim-go'
 
 
@@ -198,6 +198,12 @@ let g:jedi#popup_select_first = 1
 let g:jedi#enable_docstring = 1
 let g:jedi#popup_on_dot = 1
 let g:jedi#documentation_command = "<leader>k"
+
+"=====================================
+"Vim-Go
+"=====================================
+
+"dont forget :GoInstallBinaries
 
 "=====================================
 "Bindings
