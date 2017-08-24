@@ -40,7 +40,7 @@ stty -ixon
 
 alias ga='git add'
 alias gd='git diff'
-alias go='git checkout'
+alias gco='git checkout'
 alias gb='git branch'
 alias gc='git commit'
 alias gs='git status'
@@ -56,4 +56,6 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 eval "$(pyenv virtualenv-init -)"
-set -o vi
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin

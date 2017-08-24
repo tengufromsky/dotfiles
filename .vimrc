@@ -39,7 +39,12 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'lukhio/vim-mapping-conflicts'
 "Plugin 'tweekmonster/django-plus.vim'
+"Dont forget install packages from github for neocomplete( neocomplete press in
+"insert mode <C-o> for enable autocomplete, don't forget about gocode from go
+"Get command
+Plugin 'Shougo/neocomplete'  
 Plugin 'fatih/vim-go'
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
 
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -204,6 +209,14 @@ let g:jedi#documentation_command = "<leader>k"
 "=====================================
 
 "dont forget :GoInstallBinaries
+let g:go_doc_keywordprg_enabled = 0
+nnoremap Q :GoDoc<CR>
+
+"=====================================
+""Neocomplete
+"=====================================
+
+let g:neocomplete#enable_at_startup = 1
 
 "=====================================
 "Bindings
