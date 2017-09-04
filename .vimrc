@@ -27,6 +27,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'klen/python-mode'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'SirVer/ultisnips'
 "Plugin 'mitsuhiko/vim-jinja'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
@@ -217,10 +218,33 @@ nnoremap Q :GoDoc<CR>
 "=====================================
 
 let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+
+" Plugin key-mappings.
+inoremap <expr><C-g>     neocomplete#undo_completion()
+inoremap <expr><C-l>     neocomplete#complete_common_string()
 
 "=====================================
 "Bindings
 "=====================================
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+let g:go_snippet_engine = "ultisnips"
+let g:UltiSnipsUsePythonVersion = 3
+
+" Go related mappings
+"au FileType go nmap <Leader>i <Plug>(go-info)
+"au FileType go nmap <Leader>gd <Plug>(go-doc)
+"au FileType go nmap <Leader>r <Plug>(go-run)
+"au FileType go nmap <Leader>b <Plug>(go-build)
+"au FileType go nmap <Leader>t <Plug>(go-test)
+"au FileType go nmap gd <Plug>(go-def-tab)
 
 "nmap <c-s> :w<CR>
 "vmap <c-s> <Esc><c-s>gv
