@@ -34,6 +34,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
@@ -54,6 +55,7 @@ Plugin 'pseewald/nerdtree-tagbar-combined'
 Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plugin 'zchee/deoplete-go', {'build': {'unix': 'make'}}
 Plugin 'jodosha/vim-godebug'
+Plugin 'ryanoasis/vim-devicons'
 
 
 
