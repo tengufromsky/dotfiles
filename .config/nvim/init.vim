@@ -56,6 +56,7 @@ Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plugin 'zchee/deoplete-go', {'build': {'unix': 'make'}}
 Plugin 'jodosha/vim-godebug'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 
 
@@ -307,3 +308,8 @@ inoremap <C-a> <NOP>
 
 nnoremap <silent> <C-q> :tabclose<CR>
 nmap <silent> <F7> :ToggleNERDTreeAndTagbar<CR>
+
+"let g:webdevicons_enable_nerdtree = 1
+let g:webdevicons_enable_airline_tabline = 1
+let g:webdevicons_enable_airline_statusline = 1
+let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
