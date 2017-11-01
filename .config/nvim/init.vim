@@ -28,13 +28,13 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'jmcantrell/vim-virtualenv'
 "Plugin 'klen/python-mode'
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim'
 Plugin 'SirVer/ultisnips'
 "Plugin 'mitsuhiko/vim-jinja'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+"Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
@@ -55,8 +55,8 @@ Plugin 'pseewald/nerdtree-tagbar-combined'
 Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plugin 'zchee/deoplete-go', {'build': {'unix': 'make'}}
 Plugin 'jodosha/vim-godebug'
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+"Plugin 'ryanoasis/vim-devicons'
+"Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 
 
@@ -229,11 +229,14 @@ let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_variable_declarations = 1
 
-let g:go_metalinter_enabled = ['vet', 'golint']
+let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 "let g:go_metalinter_enabled = ['vet', 'errcheck --blank --lint', 'golint']
-let g:go_metalinter_autosave_enabled = ['vet', 'golint']
-let g:go_metalinter_autosave = 0
+let g:go_metalinter_autosave_enabled = ['golint']
+"let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+let g:go_metalinter_autosave = 1
+let g:go_fmt_command = "goimports"
 
+let g:go_autodetect_gopath = 1
 "dont forget :GoInstallBinaries
 let g:go_doc_keywordprg_enabled = 0
 

@@ -36,18 +36,18 @@ colors() {
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
 
 PS1='\[\033[01;34m\][\[\033[01;32m\]\u\[\033[01;34m\] | \[\033[01;31m\]\W\[\033[01;34m\]] $ \[\033[00m\]'
-stty -ixon
 
 alias ga='git add'
 alias gd='git diff'
 alias gco='git checkout'
-alias gb='git branch'
 alias gc='git commit'
 alias gs='git status'
 alias gitlog='git log --graph --color-words --color --source --decorate --all'
 alias lsa='ls -A --color'
 alias printscreen='import -window root screenshot.jpg'
 alias up='cd .. && lsa'
+alias ll='ls -l'
+alias lla='ls -la'
 
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source /usr/bin/virtualenvwrapper.sh
@@ -59,3 +59,6 @@ eval "$(pyenv virtualenv-init -)"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+stty -ixon
+
+source ~/.git-completion.bash
