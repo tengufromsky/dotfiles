@@ -38,7 +38,7 @@ Plugin 'SirVer/ultisnips'
 "Plugin 'mitsuhiko/vim-jinja'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'jistr/vim-nerdtree-tabs'
+"Plugin 'jistr/vim-nerdtree-tabs'
 "Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'tpope/vim-surround'
@@ -53,6 +53,7 @@ Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'mileszs/ack.vim'
 Plugin 'pseewald/nerdtree-tagbar-combined'
+Plugin 'easymotion/vim-easymotion'
 
 "NEOVIM-BASED PLUGINS
 "Deoplete needs neovim-python-client module (install via pacman)
@@ -62,6 +63,9 @@ Plugin 'zchee/deoplete-go', {'build': {'unix': 'make'}}
 Plugin 'jodosha/vim-godebug'
 "Plugin 'ryanoasis/vim-devicons'
 "Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+"
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
 
 
 
@@ -91,8 +95,8 @@ colorscheme monokai
 set hlsearch
 set incsearch
 
-nnoremap <C-G> :tabm -1<CR>
-nnoremap <C-H> :tabm +1<CR>
+"nnoremap <C-G> :tabm -1<CR>
+"nnoremap <C-H> :tabm +1<CR>
 
 "Now the brackets don't blow your brain
 
@@ -198,8 +202,8 @@ map <silent> <F3> :NERDTreeToggle<CR>
 
 let g:session_autosave = 'no'
 
-nnoremap <Leader>s :SaveSession
-nnoremap <Leader>l :OpenSession
+"nnoremap <Leader>s :SaveSession
+"nnoremap <Leader>l :OpenSession
 
 "=====================================
 "Airline settings
@@ -255,7 +259,7 @@ nnoremap Q :GoDoc<CR>
 autocmd FileType go nmap ,b  <Plug>(go-build)
 autocmd FileType go nmap ,r  <Plug>(go-run)
 autocmd FileType go nmap ,i  <Plug>(go-info)
-autocmd FileType go nmap ,d  <Plug>(go-def-tab)
+autocmd FileType go nmap ,d  <Plug>(go-def-split)
 autocmd FileType go nmap ,m  <Plug>(go-metalinter)
 
 "=====================================
@@ -296,6 +300,43 @@ if executable('ag')
   endif
 
 "=====================================
+" easymotion
+"=====================================
+
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+"=====================================
+" Fzf.vim
+"=====================================
+
+" Mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+
+" Insert mode completion
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+
+" Advanced customization using autoload functions
+inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
+
+"=====================================
 "Bindings
 "=====================================
 
@@ -308,20 +349,20 @@ map <silent> <C-n> :cnext<CR>
 map <silent> <C-m> :cprevious<CR>
 nnoremap <silent> <leader>a :cclose<CR>
 
-nmap <silent> ,t :tabnew<CR>
-nnoremap <silent> J :tabn<CR>
-nnoremap <silent> K :tabp<CR>
+"nmap <silent> ,t :tabnew<CR>
+"nnoremap <silent> J :tabn<CR>
+"nnoremap <silent> K :tabp<CR>
 
-nmap ,t :tabnew<CR>
-nnoremap J :tabn<CR>
-nnoremap K :tabp<CR>
+"nmap ,t :tabnew<CR>
+"nnoremap J :tabn<CR>
+"nnoremap K :tabp<CR>
 
 
 "conflict with TMUX bindings
 inoremap <C-a> <NOP>
 nnoremap <C-a> <NOP>
 
-nnoremap <silent> <C-q> :tabclose<CR>
+nnoremap <silent> <C-q> :bw<CR>
 nmap <silent> <F7> :ToggleNERDTreeAndTagbar<CR>
 
 nnoremap <C-J> <C-W><C-J>
