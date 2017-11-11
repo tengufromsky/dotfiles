@@ -2,6 +2,11 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 set laststatus=2
 set encoding=utf8
+set cursorline
+
+
+set splitbelow
+set splitright
 
 autocmd FileType python setlocal completeopt-=preview
 
@@ -106,7 +111,6 @@ hi IncSearch cterm=Underline ctermbg=None ctermfg=Magenta
 "python3 powerline_setup()
 "python3 del powerline_setup
 "set rtp+=/usr/lib/python3.5/site-packages/powerline/bindings/vim/
-"set laststatus=2
 "set t_Co=256
 
 set nowrap
@@ -180,6 +184,14 @@ let g:tagbar_autofocus = 1 " autofocus on Tagbar open
 map <silent> <F3> :NERDTreeToggle<CR>
 "let NERDTreeMapOpenInTab='<ENTER>' " let nerdtree oopen all new files in new tab
 
+"let g:webdevicons_enable_nerdtree = 1
+"let g:webdevicons_enable_airline_tabline = 1
+"let g:webdevicons_enable_airline_statusline = 1
+"let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+"let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+"let g:DevIconsEnableFoldersOpenClose = 1
+"let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
+
 "=====================================
 " Vim-session settings
 "=====================================
@@ -193,7 +205,6 @@ nnoremap <Leader>l :OpenSession
 "Airline settings
 "=====================================
 
-set laststatus=2
 let g:airline#extensions#tabline#enabled=1
 let g:airline_enable_fugitive=1
 let g:airline_theme='powerlineish'
@@ -308,14 +319,12 @@ nnoremap K :tabp<CR>
 
 "conflict with TMUX bindings
 inoremap <C-a> <NOP>
+nnoremap <C-a> <NOP>
 
 nnoremap <silent> <C-q> :tabclose<CR>
 nmap <silent> <F7> :ToggleNERDTreeAndTagbar<CR>
 
-"let g:webdevicons_enable_nerdtree = 1
-let g:webdevicons_enable_airline_tabline = 1
-let g:webdevicons_enable_airline_statusline = 1
-"let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-let g:DevIconsEnableFoldersOpenClose = 1
-let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
