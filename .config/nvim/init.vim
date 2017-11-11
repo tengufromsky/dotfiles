@@ -25,6 +25,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 
 Plugin 'tpope/vim-fugitive'
+Plugin 'blueyed/vim-diminactive'
 "Plugin 'lambdalisue/vim-pyenv'
 Plugin 'scrooloose/nerdtree'
 Plugin 'crusoexia/vim-monokai'
@@ -335,6 +336,12 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 
 " Advanced customization using autoload functions
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
+
+"=====================================
+"diminactive
+"=====================================
+
+
 
 "=====================================
 "Bindings
