@@ -341,7 +341,10 @@ inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
 "diminactive
 "=====================================
 
+let g:diminactive_use_syntax = 0
 
+" dark light for inactive windows
+highlight ColorColumn ctermbg=0 guibg=#eee8d5
 
 "=====================================
 "Bindings
