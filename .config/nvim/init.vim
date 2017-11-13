@@ -256,11 +256,13 @@ let g:go_autodetect_gopath = 1
 "dont forget :GoInstallBinaries
 let g:go_doc_keywordprg_enabled = 0
 
+let g:go_def_reuse_buffer = 1
+
 nnoremap Q :GoDoc<CR>
 autocmd FileType go nmap ,b  <Plug>(go-build)
 autocmd FileType go nmap ,r  <Plug>(go-run)
 autocmd FileType go nmap ,i  <Plug>(go-info)
-autocmd FileType go nmap ,d  <Plug>(go-def-split)
+autocmd FileType go nmap ,d  <Plug>(go-def-vertical)
 autocmd FileType go nmap ,m  <Plug>(go-metalinter)
 
 "=====================================
@@ -337,6 +339,8 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 " Advanced customization using autoload functions
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
 
+let g:fzf_buffers_jump = 1
+
 "=====================================
 "diminactive
 "=====================================
@@ -359,9 +363,9 @@ map <silent> <C-n> :cnext<CR>
 map <silent> <C-m> :cprevious<CR>
 nnoremap <silent> <leader>a :cclose<CR>
 
-"nmap <silent> ,t :tabnew<CR>
-"nnoremap <silent> J :tabn<CR>
-"nnoremap <silent> K :tabp<CR>
+nmap <silent> ,t :tabnew<CR>
+nnoremap <silent> J :tabn<CR>
+nnoremap <silent> K :tabp<CR>
 
 "nmap ,t :tabnew<CR>
 "nnoremap J :tabn<CR>
